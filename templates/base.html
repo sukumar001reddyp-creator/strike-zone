@@ -1,0 +1,183 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Strike Zone | Cricket Nets & Bowling Machine</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #B6FF00;
+            --dark: #0b0b0b;
+            --card: #171717;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#0b0b0b;
+            color:#fff;
+            font-family:'Poppins',sans-serif;
+        }
+
+        /* Navbar */
+        .navbar{
+            background: rgba(17,17,17,0.98);
+            backdrop-filter: blur(12px);
+            padding:18px 0;
+            border-bottom: 1px solid rgba(182,255,0,0.1);
+        }
+
+        .navbar-brand{
+            color:#B6FF00 !important;
+            font-weight:700;
+            font-size:32px;
+            letter-spacing: -1px;
+        }
+
+        .nav-link{
+            color:#ddd !important;
+            margin-left:18px;
+            font-weight:500;
+            transition:all .3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover{
+            color:#B6FF00 !important;
+        }
+
+        .nav-link::after{
+            content:'';
+            position:absolute;
+            width:0;
+            height:2px;
+            bottom:-5px;
+            left:0;
+            background:var(--primary);
+            transition:width .3s ease;
+        }
+
+        .nav-link:hover::after{
+            width:100%;
+        }
+
+        .btn-book{
+            background:#B6FF00;
+            color:#000;
+            border:none;
+            border-radius:50px;
+            padding:12px 32px;
+            font-weight:600;
+            box-shadow:0 5px 20px rgba(182,255,0,0.3);
+            transition:all .3s ease;
+        }
+
+        .btn-book:hover{
+            background:#d2ff4d;
+            transform:translateY(-3px);
+            box-shadow:0 10px 30px rgba(182,255,0,0.4);
+        }
+
+        .section-title{
+            color:#B6FF00;
+            font-weight:700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after{
+            content:'';
+            position:absolute;
+            width:50px;
+            height:3px;
+            background:#B6FF00;
+            bottom:-8px;
+            left:0;
+        }
+
+        /* Cards */
+        .card{
+    background:#171717;
+    border:1px solid #2b2b2b;
+    border-radius:18px;
+    color:#ffffff;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#B6FF00;
+    box-shadow:0 0 20px rgba(182,255,0,.25);
+}
+
+        .text-secondary{
+            color:#cfcfcf !important;
+        }
+
+        .table{
+            margin-bottom:0;
+        }
+
+        .table th{
+            color:#B6FF00;
+            font-weight:600;
+        }
+
+        .table td, .table th{
+            background:#171717 !important;
+            border-color:#2d2d2d !important;
+            padding:15px;
+        }
+
+        .card h1{
+            font-size:42px;
+            font-weight:700;
+        }
+
+        .card h3{
+            font-weight:600;
+        }
+
+        .card p{
+            color:#cfcfcf;
+        }
+        .btn-book{
+    background:#B6FF00;
+    color:#000;
+    padding:10px 25px;
+    border-radius:30px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.btn-book:hover{
+    background:#d8ff4d;
+    color:#000;
+}
+    </style>
+</head>
+
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
