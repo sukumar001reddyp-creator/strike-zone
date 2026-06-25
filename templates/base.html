@@ -5,7 +5,7 @@
     <title>Strike Zone | Cricket Nets & Bowling Machine</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,42 +40,59 @@
         .navbar{
             background: rgba(17,17,17,0.98);
             backdrop-filter: blur(12px);
-            padding:18px 0;
-            border-bottom: 1px solid rgba(182,255,0,0.1);
+            padding:15px 0;
         }
 
         .navbar-brand{
             color:#B6FF00 !important;
             font-weight:700;
-            font-size:32px;
+            font-size:26px;
             letter-spacing: -1px;
+        }
+
+        /* Responsive Headings - Mobile First */
+        h1, .display-3, .display-4 {
+            font-size: 1.85rem !important;     /* Mobile lo chinnaga */
+            line-height: 1.15;
+        }
+
+        .lead {
+            font-size: 1.02rem !important;
+        }
+
+        .section-title {
+            color:#B6FF00;
+            font-weight:700;
+            font-size: 1.9rem !important;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Desktop lo peddaga */
+        @media (min-width: 768px) {
+            h1, .display-3, .display-4 {
+                font-size: 3.2rem !important;
+            }
+            .lead {
+                font-size: 1.25rem !important;
+            }
+            .section-title {
+                font-size: 2.7rem !important;
+            }
+            .navbar-brand {
+                font-size: 32px;
+            }
         }
 
         .nav-link{
             color:#ddd !important;
-            margin-left:18px;
+            margin-left:16px;
             font-weight:500;
             transition:all .3s ease;
-            position: relative;
         }
 
         .nav-link:hover{
             color:#B6FF00 !important;
-        }
-
-        .nav-link::after{
-            content:'';
-            position:absolute;
-            width:0;
-            height:2px;
-            bottom:-5px;
-            left:0;
-            background:var(--primary);
-            transition:width .3s ease;
-        }
-
-        .nav-link:hover::after{
-            width:100%;
         }
 
         .btn-book{
@@ -83,94 +100,33 @@
             color:#000;
             border:none;
             border-radius:50px;
-            padding:12px 32px;
+            padding:11px 26px;
             font-weight:600;
             box-shadow:0 5px 20px rgba(182,255,0,0.3);
-            transition:all .3s ease;
         }
 
         .btn-book:hover{
             background:#d2ff4d;
             transform:translateY(-3px);
-            box-shadow:0 10px 30px rgba(182,255,0,0.4);
-        }
-
-        .section-title{
-            color:#B6FF00;
-            font-weight:700;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title:after{
-            content:'';
-            position:absolute;
-            width:50px;
-            height:3px;
-            background:#B6FF00;
-            bottom:-8px;
-            left:0;
         }
 
         /* Cards */
         .card{
-    background:#171717;
-    border:1px solid #2b2b2b;
-    border-radius:18px;
-    color:#ffffff;
-    transition:.3s;
-}
+            background:#171717;
+            border:1px solid #2b2b2b;
+            border-radius:18px;
+            transition:.3s;
+        }
 
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#B6FF00;
-    box-shadow:0 0 20px rgba(182,255,0,.25);
-}
+        .card:hover{
+            transform:translateY(-8px);
+            border-color:#B6FF00;
+            box-shadow:0 0 20px rgba(182,255,0,.25);
+        }
 
         .text-secondary{
             color:#cfcfcf !important;
         }
-
-        .table{
-            margin-bottom:0;
-        }
-
-        .table th{
-            color:#B6FF00;
-            font-weight:600;
-        }
-
-        .table td, .table th{
-            background:#171717 !important;
-            border-color:#2d2d2d !important;
-            padding:15px;
-        }
-
-        .card h1{
-            font-size:42px;
-            font-weight:700;
-        }
-
-        .card h3{
-            font-weight:600;
-        }
-
-        .card p{
-            color:#cfcfcf;
-        }
-        .btn-book{
-    background:#B6FF00;
-    color:#000;
-    padding:10px 25px;
-    border-radius:30px;
-    font-weight:600;
-    text-decoration:none;
-}
-
-.btn-book:hover{
-    background:#d8ff4d;
-    color:#000;
-}
     </style>
 </head>
 
